@@ -11,7 +11,7 @@ module.exports = {
       '/api': 'http://localhost:3000',
     },
     historyApiFallback: true,
-    contentBase: path.join(__dirname, './electron/src/renderer')
+    contentBase: path.join(__dirname, './electron/src/renderer/')
   },
   devtool: 'source-map',
   module: {
@@ -27,7 +27,7 @@ module.exports = {
     }]
   },
   output: {
-    path: path.resolve(__dirname, 'react', 'build'),
+    path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js'
   },
   plugins: [

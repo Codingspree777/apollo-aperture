@@ -4,12 +4,16 @@ import Header from '../Header';
 import Content from '../Content';
 import StyledApp from './App.styled';
 
-const App = () =>
-  <StyledApp>
+const App = () => {
+  return (
+    <StyledApp>
     <Router>
       <Header />
       <Content />
     </Router>
-  </StyledApp>;
+  </StyledApp>
+  )
+}
+
 
 export default App;

@@ -1,12 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from './components/App';
+import App from './components/App/App';
 import GlobalStyle from './globalStyle';
 
 render(
-  <>
-  <GlobalStyle/>
+  <div>
+    <GlobalStyle />
     <App />
-  </>,
-  document.getElementById('app'),
+  </div>,
+  document.getElementById('app')
 );
