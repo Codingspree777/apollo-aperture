@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './react/index.js',
+  entry: './electron/src/renderer/index.js',
   mode: 'development',
   devServer: {
     hot: true,
@@ -11,7 +11,7 @@ module.exports = {
       '/api': 'http://localhost:3000',
     },
     historyApiFallback: true,
-    contentBase: path.join(__dirname, 'react')
+    contentBase: path.join(__dirname, './electron/src/renderer')
   },
   devtool: 'source-map',
   module: {
@@ -32,5 +32,6 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()
-  ]
+  ],
+  target: 'electron-renderer'
 };
